@@ -18,6 +18,17 @@ contract ReducingPayout {
     }
 
     function withdraw() public {
-        // your code here
+        //require(block.timestamp <= depositedTime + 86400, "You ran out of time to withdraw");
+        uint256 amount;
+        uint256 currentSecond = block.timestamp - depositedTime;
+
+        if (block.timestamp < depositedTime + 86400) {
+            amount = 1 ether - ((currentSecond * .0011574 ether) / 100);
+        } else {
+            amount = 0;
+        }
+        (bool success, ) = msg.sender.call{value: amount}("");
+        require(success, "Withdrawal failed");
+
     }
 }
