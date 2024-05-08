@@ -1,2 +1,14 @@
 [submodule "lib/forge-std"]
 	branch = v1.5.0
+[submodule "TokenExchange/lib/forge-std"]
+	path = TokenExchange/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "DeployNFT/lib/forge-std"]
+	path = DeployNFT/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "FoundryNFT/lib/forge-std"]
+	path = FoundryNFT/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "FoundryNFT/lib/openzeppelin-contracts"]
+	path = FoundryNFT/lib/openzeppelin-contracts
+	url = https://github.com/Openzeppelin/openzeppelin-contracts
